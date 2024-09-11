@@ -1,0 +1,11 @@
+<div class="flex-auto justify-center rounded-lg px-2 py-2 bg-gray-100 max-w-screen-sm shadow-md">
+  <div class="rounded-lg items-center py-2 px-2 mt-2">
+    <%= form_with url: root_path, method: :get, data: { turbo_frame: 'list_cpf' }, local: true do |f| %>
+      <%= f.text_field :query, value: params[:query], placeholder: "Search by CPF number", class: "border-gray-400 rounded-lg bg-white w-96 px-4 py-2", style: "width: 500px; border-width: 2px;" %>
+      <button type="submit" class="ml-2 rounded-lg bg-blue-800 px-4 py-2 text-white">Search</button>
+    <% end %>
+  </div>
+</div>
+
+
+<%= render 'cpf_list'%>
